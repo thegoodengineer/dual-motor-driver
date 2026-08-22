@@ -1,15 +1,8 @@
-# The brief
+# dual motor driver
 
-Describe the board you want: what it does, the parts it must use, the
-interfaces it exposes, and the constraints that bound the layout.
+A dual DC motor driver board a microcontroller can command over a header.
 
-A hosted `create` run overwrites this file with the brief you typed in the
-console, then works from it.
-
-## What makes a brief usable
-
-- **Parts** by designator where you care, and by function where you do not.
-- **Power**: what comes in, what rails come out, and how much current.
-- **Interfaces**: every connector and bus, and what is on it.
-- **Constraints**: layer count, board outline, assembly method, and anything
-  the board must not do.
+Parts: DRV8833 dual H-bridge, a 12 V barrel jack, a buck converter to 3V3 for logic, bulk electrolytics on the motor rail, and a 2x5 control header.
+Power: 12 V in, motor rail direct, logic on 3V3, 1.5 A per channel.
+Interfaces: four PWM inputs and one sleep line on the control header, screw terminals for each motor.
+Constraints: two layers with a solid ground pour, under 60 by 40 mm, wide traces on the motor rail, and thermal relief on the driver's pad.
